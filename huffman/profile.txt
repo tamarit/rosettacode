@@ -1,0 +1,619 @@
+%% Analysis results:
+{  analysis_options,
+ [{callers, true},
+  {sort, acc},
+  {totals, false},
+  {details, true}]}.
+
+%                                               CNT       ACC       OWN        
+[{ totals,                                     98336,  302.103,  301.668}].  %%%
+
+
+%                                               CNT       ACC       OWN        
+[{ "<0.40.0>",                                 98336,undefined,  301.668}].   %%
+
+{[{undefined,                                     0,  302.074,    0.003}],     
+ { {huffman,profile,1},                           0,  302.074,    0.003},     %
+ [{{fprof,just_call,2},                           0,  212.598,    0.003},      
+  {{huffman,decode,2},                            1,   89.435,    0.001},      
+  {{fprof,trace,1},                               1,    0.034,    0.002},      
+  {suspend,                                       1,    0.004,    0.000}]}.    
+
+{[{{huffman,profile,1},                           0,  212.598,    0.003},      
+  {undefined,                                     0,    0.029,    0.021},      
+  {{fprof,call,1},                                1,    0.015,    0.011}],     
+ { {fprof,just_call,2},                           1,  212.642,    0.035},     %
+ [{{huffman,encode,1},                            1,  212.595,    0.014},      
+  {{erlang,demonitor,1},                          1,    0.008,    0.008},      
+  {{erlang,monitor,2},                            1,    0.004,    0.004},      
+  {suspend,                                       1,    0.000,    0.000}]}.    
+
+{[{{fprof,just_call,2},                           1,  212.595,    0.014}],     
+ { {huffman,encode,1},                            1,  212.595,    0.014},     %
+ [{{huffman,freq_table,1},                        1,  102.385,    0.003},      
+  {{huffman,'-encode/1-lbc$^0/2-0-',3},           1,   93.330,    0.005},      
+  {{huffman,tree,1},                              1,   14.330,    0.002},      
+  {{dict,from_list,1},                            1,    1.706,    0.012},      
+  {{huffman,codewords,1},                         1,    0.830,    0.014}]}.    
+
+{[{{huffman,encode,1},                            1,  102.385,    0.003}],     
+ { {huffman,freq_table,1},                        1,  102.385,    0.003},     %
+ [{{lists,sort,1},                                1,   83.802,    0.003},      
+  {{huffman,freq_table,2},                        1,   18.580,    0.002}]}.    
+
+{[{{huffman,encode,1},                            1,   93.330,    0.005},      
+  {{huffman,'-encode/1-lbc$^0/2-0-',3},        4343,    0.000,   14.615}],     
+ { {huffman,'-encode/1-lbc$^0/2-0-',3},        4344,   93.330,   14.620},     %
+ [{{dict,fetch,2},                             4343,   78.702,   29.196},      
+  {suspend,                                       5,    0.008,    0.000},      
+  {{huffman,'-encode/1-lbc$^0/2-0-',3},        4343,    0.000,   14.615}]}.    
+
+{[{{huffman,profile,1},                           1,   89.435,    0.001}],     
+ { {huffman,decode,2},                            1,   89.435,    0.001},     %
+ [{{huffman,decode,4},                            1,   89.434,    0.001}]}.    
+
+{[{{huffman,decode,2},                            1,   89.434,    0.001},      
+  {{huffman,decode,4},                         18406,    0.000,   87.825}],     
+ { {huffman,decode,4},                         18407,   89.434,   87.826},     %
+ [{garbage_collect,                             103,    1.443,    1.443},      
+  {suspend,                                       9,    0.106,    0.000},      
+  {{lists,reverse,1},                             1,    0.059,    0.010},      
+  {{huffman,decode,4},                         18406,    0.000,   87.825}]}.    
+
+{[{{huffman,freq_table,1},                        1,   83.802,    0.003}],     
+ { {lists,sort,1},                                1,   83.802,    0.003},     %
+ [{{lists,split_1,5},                             1,   83.799,    0.018}]}.    
+
+{[{{lists,sort,1},                                1,   83.799,    0.018},      
+  {{lists,split_1_1,6},                         860,    0.000,    3.795},      
+  {{lists,split_1,5},                          2009,    0.000,    7.219}],     
+ { {lists,split_1,5},                          2870,   83.799,   11.032},     %
+ [{{lists,split_1_1,6},                         861,   83.770,    3.094},      
+  {garbage_collect,                               1,    0.151,    0.151},      
+  {suspend,                                       1,    0.010,    0.000},      
+  {{lists,split_1,5},                          2009,    0.000,    7.219}]}.    
+
+{[{{lists,split_1,5},                           861,   83.770,    3.094},      
+  {{lists,split_1_1,6},                         611,    0.000,    2.191}],     
+ { {lists,split_1_1,6},                        1472,   83.770,    5.285},     %
+ [{{lists,rmergel,2},                             1,   67.172,    0.004},      
+  {garbage_collect,                               2,    0.114,    0.114},      
+  {suspend,                                       2,    0.035,    0.000},      
+  {{lists,split_1_1,6},                         611,    0.000,    2.191},      
+  {{lists,split_1,5},                           860,    0.000,    3.795}]}.    
+
+{[{{huffman,'-encode/1-lbc$^0/2-0-',3},        4343,   78.702,   29.196}],     
+ { {dict,fetch,2},                             4343,   78.702,   29.196},     %
+ [{{dict,get_slot,2},                          4343,   22.106,   14.649},      
+  {{dict,get_bucket,2},                        4343,   14.757,    7.231},      
+  {{dict,fetch_val,2},                         4343,   12.590,    7.293},      
+  {suspend,                                      10,    0.053,    0.000}]}.    
+
+{[{{lists,split_1_1,6},                           1,   67.172,    0.004},      
+  {{lists,rmergel,2},                           322,    0.000,    1.461},      
+  {{lists,mergel,2},                              3,    0.000,    0.018}],     
+ { {lists,rmergel,2},                           326,   67.172,    1.483},     %
+ [{{lists,mergel,2},                              4,   57.098,    0.015},      
+  {{lists,rmerge3_1,6},                         322,   22.277,    0.594},      
+  {{lists,rmerge2_1,4},                           2,   11.263,    0.003},      
+  {suspend,                                       1,    0.018,    0.000},      
+  {{lists,reverse,2},                             1,    0.001,    0.001},      
+  {{lists,rmergel,2},                           322,    0.000,    1.461}]}.    
+
+{[{{lists,rmergel,2},                             4,   57.098,    0.015},      
+  {{lists,mergel,2},                            107,    0.000,    0.654}],     
+ { {lists,mergel,2},                            111,   57.098,    0.669},     %
+ [{{lists,merge3_1,6},                          107,   30.518,    0.300},      
+  {{lists,merge2_1,4},                            1,    0.936,    0.001},      
+  {{lists,reverse,2},                             1,    0.007,    0.007},      
+  {{lists,rmergel,2},                             3,    0.000,    0.018},      
+  {{lists,mergel,2},                            107,    0.000,    0.654}]}.    
+
+{[{{lists,mergel,2},                            107,   30.518,    0.300},      
+  {{lists,merge3_2,6},                          257,    0.000,    0.796},      
+  {{lists,merge3_12_3,6},                       661,    0.000,    2.020},      
+  {{lists,merge3_1,6},                         2553,    0.000,    5.903}],     
+ { {lists,merge3_1,6},                         3578,   30.518,    9.019},     %
+ [{{lists,merge3_2,6},                          759,   28.946,    2.907},      
+  {{lists,merge3_21_3,6},                        66,    5.018,    0.242},      
+  {{lists,merge3_12_3,6},                       153,    0.718,    0.544},      
+  {{lists,merge2_1,4},                           39,    0.390,    0.134},      
+  {{lists,merge2_2,5},                            8,    0.095,    0.043},      
+  {{lists,merge3_1,6},                         2553,    0.000,    5.903}]}.    
+
+{[{{lists,merge3_1,6},                          759,   28.946,    2.907},      
+  {{lists,merge3_21_3,6},                       289,    0.000,    0.885},      
+  {{lists,merge3_2,6},                         2870,    0.000,    6.449}],     
+ { {lists,merge3_2,6},                         3918,   28.946,   10.241},     %
+ [{{lists,merge3_12_3,6},                       530,   24.718,    1.606},      
+  {{lists,merge3_21_3,6},                       228,   18.201,    0.696},      
+  {{lists,merge2_2,5},                           29,    0.354,    0.083},      
+  {garbage_collect,                               2,    0.250,    0.250},      
+  {suspend,                                       4,    0.068,    0.000},      
+  {{lists,merge2_1,4},                            4,    0.030,    0.007},      
+  {{lists,merge3_2,6},                         2870,    0.000,    6.449},      
+  {{lists,merge3_1,6},                          257,    0.000,    0.796}]}.    
+
+{[{{lists,merge3_2,6},                          530,   24.718,    1.606},      
+  {{lists,merge3_1,6},                          153,    0.718,    0.544},      
+  {{lists,merge3_12_3,6},                      2431,    0.000,    5.468}],     
+ { {lists,merge3_12_3,6},                      3114,   25.436,    7.618},     %
+ [{{lists,merge2_1,4},                           22,    0.246,    0.089},      
+  {garbage_collect,                               1,    0.052,    0.052},      
+  {suspend,                                       2,    0.010,    0.000},      
+  {{lists,merge3_12_3,6},                      2431,    0.000,    5.468},      
+  {{lists,merge3_1,6},                          661,    0.000,    2.020}]}.    
+
+{[{{lists,merge3_2,6},                          228,   18.201,    0.696},      
+  {{lists,merge3_1,6},                           66,    5.018,    0.242},      
+  {{lists,merge3_21_3,6},                       419,    0.000,    1.053}],     
+ { {lists,merge3_21_3,6},                       713,   23.219,    1.991},     %
+ [{{lists,merge2_2,5},                            5,    0.126,    0.054},      
+  {garbage_collect,                               1,    0.015,    0.015},      
+  {suspend,                                       1,    0.013,    0.000},      
+  {{lists,merge3_21_3,6},                       419,    0.000,    1.053},      
+  {{lists,merge3_2,6},                          289,    0.000,    0.885}]}.    
+
+{[{{dict,fetch,2},                             4343,   22.106,   14.649},      
+  {{dict,store,3},                               43,    0.237,    0.154}],     
+ { {dict,get_slot,2},                          4386,   22.343,   14.803},     %
+ [{{erlang,phash,2},                           4386,    7.540,    7.540}]}.    
+
+{[{{lists,rmergel,2},                           322,   22.277,    0.594},      
+  {{lists,rmerge3_21_3,6},                      420,    0.000,    0.768},      
+  {{lists,rmerge3_2,6},                         858,    0.000,    1.805},      
+  {{lists,rmerge3_1,6},                        2057,    0.000,    3.617}],     
+ { {lists,rmerge3_1,6},                        3657,   22.277,    6.784},     %
+ [{{lists,rmerge3_12_3,6},                      771,   16.682,    1.382},      
+  {{lists,rmerge3_21_3,6},                      273,    8.176,    0.497},      
+  {{lists,rmerge3_2,6},                         504,    7.589,    0.985},      
+  {{lists,rmerge2_2,5},                          30,    0.182,    0.074},      
+  {{lists,rmerge2_1,4},                          22,    0.164,    0.040},      
+  {garbage_collect,                               1,    0.027,    0.027},      
+  {suspend,                                       1,    0.018,    0.000},      
+  {{lists,rmerge3_1,6},                        2057,    0.000,    3.617}]}.    
+
+{[{{lists,rmerge3_12_3,6},                      906,   13.055,    1.710},      
+  {{lists,rmerge3_1,6},                         504,    7.589,    0.985},      
+  {{lists,rmerge3_2,6},                        1947,    0.000,    3.554}],     
+ { {lists,rmerge3_2,6},                        3357,   20.644,    6.249},     %
+ [{{lists,rmerge3_21_3,6},                      181,    2.824,    0.366},      
+  {{lists,rmerge3_12_3,6},                      299,    2.746,    0.584},      
+  {{lists,rmerge2_2,5},                          45,    0.312,    0.121},      
+  {{lists,rmerge2_1,4},                          27,    0.204,    0.056},      
+  {suspend,                                       1,    0.001,    0.000},      
+  {{lists,rmerge3_2,6},                        1947,    0.000,    3.554},      
+  {{lists,rmerge3_1,6},                         858,    0.000,    1.805}]}.    
+
+{[{{lists,rmerge3_1,6},                         771,   16.682,    1.382},      
+  {{lists,rmerge3_2,6},                         299,    2.746,    0.584},      
+  {{lists,rmerge3_12_3,6},                     2107,    0.000,    3.525}],     
+ { {lists,rmerge3_12_3,6},                     3177,   19.428,    5.491},     %
+ [{{lists,rmerge3_2,6},                         906,   13.055,    1.710},      
+  {{lists,rmerge2_2,5},                         164,    1.345,    0.411},      
+  {suspend,                                       2,    0.019,    0.000},      
+  {{lists,rmerge3_12_3,6},                     2107,    0.000,    3.525}]}.    
+
+{[{{huffman,freq_table,1},                        1,   18.580,    0.002},      
+  {{huffman,freq_table,2},                       43,    0.000,    0.116}],     
+ { {huffman,freq_table,2},                       44,   18.580,    0.118},     %
+ [{{lists,splitwith,2},                          43,   18.462,    0.062},      
+  {{huffman,freq_table,2},                       43,    0.000,    0.116}]}.    
+
+{[{{huffman,freq_table,2},                       43,   18.462,    0.062}],     
+ { {lists,splitwith,2},                          43,   18.462,    0.062},     %
+ [{{lists,splitwith,3},                          43,   18.400,    0.130}]}.    
+
+{[{{lists,splitwith,2},                          43,   18.400,    0.130},      
+  {{lists,splitwith,3},                        4300,    0.000,   12.011}],     
+ { {lists,splitwith,3},                        4343,   18.400,   12.141},     %
+ [{{huffman,'-freq_table/2-fun-0-',2},         4342,    6.093,    6.092},      
+  {{lists,reverse,1},                            43,    0.141,    0.094},      
+  {suspend,                                       5,    0.024,    0.000},      
+  {garbage_collect,                               1,    0.001,    0.001},      
+  {{lists,splitwith,3},                        4300,    0.000,   12.011}]}.    
+
+{[{{dict,fetch,2},                             4343,   14.757,    7.231}],     
+ { {dict,get_bucket,2},                        4343,   14.757,    7.231},     %
+ [{{dict,get_bucket_s,2},                      4343,    7.525,    7.525},      
+  {suspend,                                       1,    0.001,    0.000}]}.    
+
+{[{{huffman,encode,1},                            1,   14.330,    0.002},      
+  {{huffman,tree,1},                             42,    0.000,    0.294}],     
+ { {huffman,tree,1},                             43,   14.330,    0.296},     %
+ [{{lists,keysort,2},                            42,   14.034,    0.166},      
+  {{huffman,tree,1},                             42,    0.000,    0.294}]}.    
+
+{[{{huffman,tree,1},                             42,   14.034,    0.166}],     
+ { {lists,keysort,2},                            42,   14.034,    0.166},     %
+ [{{lists,keysplit_2,8},                         39,   13.237,    0.161},      
+  {{lists,keysplit_1,8},                          1,    0.631,    0.001}]}.    
+
+{[{{lists,rmerge2_1,4},                         155,   11.625,    0.338},      
+  {{lists,rmerge3_12_3,6},                      164,    1.345,    0.411},      
+  {{lists,rmerge3_2,6},                          45,    0.312,    0.121},      
+  {{lists,rmerge3_1,6},                          30,    0.182,    0.074},      
+  {{lists,rmerge2_2,5},                        1908,    0.000,    4.400}],     
+ { {lists,rmerge2_2,5},                        2302,   13.464,    5.344},     %
+ [{{lists,reverse,2},                           295,    0.462,    0.462},      
+  {{lists,rmerge2_1,4},                          99,    0.173,    0.183},      
+  {suspend,                                       1,    0.009,    0.000},      
+  {{lists,rmerge2_2,5},                        1908,    0.000,    4.400}]}.    
+
+{[{{lists,keysort,2},                            39,   13.237,    0.161},      
+  {{lists,keysplit_2_1,10},                     260,    0.000,    1.088},      
+  {{lists,keysplit_2,8},                        286,    0.000,    1.157}],     
+ { {lists,keysplit_2,8},                        585,   13.237,    2.406},     %
+ [{{lists,keysplit_2_1,10},                     273,   12.909,    1.165},      
+  {{lists,keymergel,4},                          26,    6.453,    0.175},      
+  {{lists,keysplit_2,8},                        286,    0.000,    1.157}]}.    
+
+{[{{lists,keysplit_2,8},                        273,   12.909,    1.165}],     
+ { {lists,keysplit_2_1,10},                     273,   12.909,    1.165},     %
+ [{{lists,keymergel,4},                          13,    3.201,    0.098},      
+  {suspend,                                       1,    0.012,    0.000},      
+  {{lists,keysplit_2,8},                        260,    0.000,    1.088}]}.    
+
+{[{{dict,fetch,2},                             4343,   12.590,    7.293},      
+  {{dict,fetch_val,2},                         2907,    0.000,    5.296}],     
+ { {dict,fetch_val,2},                         7250,   12.590,   12.589},     %
+ [{suspend,                                       1,    0.001,    0.000},      
+  {{dict,fetch_val,2},                         2907,    0.000,    5.296}]}.    
+
+{[{{lists,rmergel,2},                             2,   11.263,    0.003},      
+  {{lists,rmerge3_21_3,6},                       34,    0.286,    0.090},      
+  {{lists,rmerge3_2,6},                          27,    0.204,    0.056},      
+  {{lists,rmerge2_2,5},                          99,    0.173,    0.183},      
+  {{lists,rmerge3_1,6},                          22,    0.164,    0.040},      
+  {{lists,rmerge2_1,4},                        3073,    0.000,    7.483}],     
+ { {lists,rmerge2_1,4},                        3257,   12.090,    7.855},     %
+ [{{lists,rmerge2_2,5},                         155,   11.625,    0.338},      
+  {{lists,reverse,2},                            29,    0.038,    0.038},      
+  {garbage_collect,                               1,    0.034,    0.034},      
+  {suspend,                                       2,    0.014,    0.000},      
+  {{lists,rmerge2_1,4},                        3073,    0.000,    7.483}]}.    
+
+{[{{lists,rmerge3_1,6},                         273,    8.176,    0.497},      
+  {{lists,rmerge3_2,6},                         181,    2.824,    0.366},      
+  {{lists,rmerge3_21_3,6},                      204,    0.000,    0.332}],     
+ { {lists,rmerge3_21_3,6},                      658,   11.000,    1.195},     %
+ [{{lists,rmerge2_1,4},                          34,    0.286,    0.090},      
+  {{lists,rmerge3_21_3,6},                      204,    0.000,    0.332},      
+  {{lists,rmerge3_1,6},                         420,    0.000,    0.768}]}.    
+
+{[{{lists,keysplit_2,8},                         26,    6.453,    0.175},      
+  {{lists,keysplit_2_1,10},                      13,    3.201,    0.098},      
+  {{lists,rkeymergel,4},                         56,    0.165,    0.271},      
+  {{lists,keymergel,4},                         121,    0.000,    0.732}],     
+ { {lists,keymergel,4},                         216,    9.819,    1.276},     %
+ [{{lists,rkeymergel,4},                         55,    5.329,    0.423},      
+  {{lists,keymerge3_1,10},                       91,    2.948,    0.321},      
+  {{lists,keymerge2_1,6},                        30,    1.908,    0.129},      
+  {{lists,reverse,2},                            13,    0.042,    0.042},      
+  {{lists,keymergel,4},                         121,    0.000,    0.732}]}.    
+
+{[{{dict,get_slot,2},                          4386,    7.540,    7.540}],     
+ { {erlang,phash,2},                           4386,    7.540,    7.540},     %
+ [ ]}.
+
+{[{{dict,get_bucket,2},                        4343,    7.525,    7.525}],     
+ { {dict,get_bucket_s,2},                      4343,    7.525,    7.525},     %
+ [ ]}.
+
+{[{{lists,splitwith,3},                        4342,    6.093,    6.092}],     
+ { {huffman,'-freq_table/2-fun-0-',2},         4342,    6.093,    6.092},     %
+ [{garbage_collect,                               1,    0.001,    0.001}]}.    
+
+{[{{lists,keymergel,4},                          55,    5.329,    0.423},      
+  {{lists,keysplit_1,8},                          1,    0.459,    0.006},      
+  {{lists,rkeymergel,4},                         43,    0.000,    0.293}],     
+ { {lists,rkeymergel,4},                         99,    5.788,    0.722},     %
+ [{{lists,rkeymerge3_1,10},                      27,    2.482,    0.112},      
+  {{lists,rkeymerge2_1,6},                       16,    0.586,    0.054},      
+  {{lists,keymergel,4},                          56,    0.165,    0.271},      
+  {{lists,reverse,2},                            31,    0.136,    0.136},      
+  {garbage_collect,                               1,    0.013,    0.013},      
+  {{lists,rkeymergel,4},                         43,    0.000,    0.293}]}.    
+
+{[{{lists,keymergel,4},                          30,    1.908,    0.129},      
+  {{lists,keymerge3_1,10},                       81,    1.367,    0.270},      
+  {{lists,keymerge3_2,10},                        1,    0.018,    0.012},      
+  {{lists,keymerge2_2,7},                         1,    0.007,    0.006},      
+  {{lists,keymerge2_1,6},                       540,    0.000,    2.274}],     
+ { {lists,keymerge2_1,6},                       653,    3.300,    2.691},     %
+ [{{lists,reverse,2},                            99,    0.330,    0.330},      
+  {{lists,keymerge2_2,7},                        14,    0.271,    0.054},      
+  {suspend,                                       1,    0.008,    0.000},      
+  {{lists,keymerge2_1,6},                       540,    0.000,    2.274}]}.    
+
+{[{{lists,keymergel,4},                          91,    2.948,    0.321},      
+  {{lists,keymerge3_2,10},                        3,    0.000,    0.009},      
+  {{lists,keymerge3_12_3,9},                      4,    0.000,    0.009},      
+  {{lists,keymerge3_1,10},                      259,    0.000,    0.896}],     
+ { {lists,keymerge3_1,10},                      357,    2.948,    1.235},     %
+ [{{lists,keymerge2_1,6},                        81,    1.367,    0.270},      
+  {{lists,keymerge3_2,10},                       14,    0.395,    0.066},      
+  {{lists,keymerge3_21_3,9},                      1,    0.021,    0.001},      
+  {{lists,keymerge3_12_3,9},                      2,    0.000,    0.007},      
+  {{lists,keymerge3_1,10},                      259,    0.000,    0.896}]}.    
+
+{[{{lists,rkeymergel,4},                         27,    2.482,    0.112},      
+  {{lists,rkeymerge3_21_3,9},                     1,    0.000,    0.006},      
+  {{lists,rkeymerge3_2,10},                       3,    0.000,    0.024},      
+  {{lists,rkeymerge3_1,10},                       3,    0.000,    0.032}],     
+ { {lists,rkeymerge3_1,10},                      34,    2.482,    0.174},     %
+ [{{lists,rkeymerge3_12_3,9},                    25,    2.203,    0.109},      
+  {{lists,rkeymerge3_2,10},                       5,    0.129,    0.037},      
+  {{lists,rkeymerge3_21_3,9},                     1,    0.068,    0.006},      
+  {{lists,rkeymerge3_1,10},                       3,    0.000,    0.032}]}.    
+
+{[{{lists,rkeymerge3_1,10},                      25,    2.203,    0.109},      
+  {{lists,rkeymerge3_2,10},                       4,    0.037,    0.015},      
+  {{lists,rkeymerge3_12_3,9},                   186,    0.000,    0.760}],     
+ { {lists,rkeymerge3_12_3,9},                   215,    2.240,    0.884},     %
+ [{{lists,rkeymerge2_2,7},                       25,    1.303,    0.113},      
+  {{lists,rkeymerge3_2,10},                       4,    0.055,    0.015},      
+  {{lists,rkeymerge3_12_3,9},                   186,    0.000,    0.760}]}.    
+
+{[{{huffman,decode,4},                          103,    1.443,    1.443},      
+  {{lists,merge3_2,6},                            2,    0.250,    0.250},      
+  {{lists,split_1,5},                             1,    0.151,    0.151},      
+  {{lists,split_1_1,6},                           2,    0.114,    0.114},      
+  {{lists,merge3_12_3,6},                         1,    0.052,    0.052},      
+  {{lists,reverse,1},                             2,    0.038,    0.038},      
+  {{lists,rmerge2_1,4},                           1,    0.034,    0.034},      
+  {{lists,rmerge3_1,6},                           1,    0.027,    0.027},      
+  {{dict,on_bucket,3},                            1,    0.018,    0.018},      
+  {{lists,merge3_21_3,6},                         1,    0.015,    0.015},      
+  {{lists,rkeymergel,4},                          1,    0.013,    0.013},      
+  {{huffman,codewords,2},                         1,    0.008,    0.008},      
+  {{lists,splitwith,3},                           1,    0.001,    0.001},      
+  {{huffman,'-freq_table/2-fun-0-',2},            1,    0.001,    0.001}],     
+ { garbage_collect,                             119,    2.165,    2.165},     %
+ [ ]}.
+
+{[{{lists,mergel,2},                              1,    0.936,    0.001},      
+  {{lists,merge3_1,6},                           39,    0.390,    0.134},      
+  {{lists,merge2_2,5},                           49,    0.250,    0.191},      
+  {{lists,merge3_12_3,6},                        22,    0.246,    0.089},      
+  {{lists,merge3_2,6},                            4,    0.030,    0.007},      
+  {{lists,merge2_1,4},                          186,    0.000,    0.570}],     
+ { {lists,merge2_1,4},                          301,    1.852,    0.992},     %
+ [{{lists,merge2_2,5},                           50,    1.114,    0.190},      
+  {{lists,reverse,2},                            65,    0.165,    0.165},      
+  {suspend,                                       1,    0.003,    0.000},      
+  {{lists,merge2_1,4},                          186,    0.000,    0.570}]}.    
+
+{[{{lists,rkeymerge3_12_3,9},                    25,    1.303,    0.113},      
+  {{lists,rkeymerge2_1,6},                       42,    0.532,    0.158},      
+  {{lists,rkeymerge2_2,7},                      282,    0.000,    1.257}],     
+ { {lists,rkeymerge2_2,7},                      349,    1.835,    1.528},     %
+ [{{lists,rkeymerge2_1,6},                       27,    0.414,    0.099},      
+  {{lists,reverse,2},                            40,    0.168,    0.168},      
+  {{lists,rkeymerge2_2,7},                      282,    0.000,    1.257}]}.    
+
+{[{{huffman,encode,1},                            1,    1.706,    0.012}],     
+ { {dict,from_list,1},                            1,    1.706,    0.012},     %
+ [{{lists,foldl,3},                               1,    1.676,    0.008},      
+  {{dict,new,0},                                  1,    0.018,    0.012}]}.    
+
+{[{{lists,merge2_1,4},                           50,    1.114,    0.190},      
+  {{lists,merge3_2,6},                           29,    0.354,    0.083},      
+  {{lists,merge3_21_3,6},                         5,    0.126,    0.054},      
+  {{lists,merge3_1,6},                            8,    0.095,    0.043},      
+  {{lists,merge2_2,5},                          166,    0.000,    0.530}],     
+ { {lists,merge2_2,5},                          258,    1.689,    0.900},     %
+ [{{lists,merge2_1,4},                           49,    0.250,    0.191},      
+  {{lists,reverse,2},                            43,    0.117,    0.117},      
+  {{lists,merge2_2,5},                          166,    0.000,    0.530}]}.    
+
+{[{{dict,from_list,1},                            1,    1.676,    0.008},      
+  {{lists,foldl,3},                              43,    0.000,    0.146}],     
+ { {lists,foldl,3},                              44,    1.676,    0.154},     %
+ [{{dict,'-from_list/1-fun-0-',2},               43,    1.522,    0.056},      
+  {{lists,foldl,3},                              43,    0.000,    0.146}]}.    
+
+{[{{lists,rmerge2_2,5},                         295,    0.462,    0.462},      
+  {{lists,keymerge2_1,6},                        99,    0.330,    0.330},      
+  {{lists,rkeymerge2_2,7},                       40,    0.168,    0.168},      
+  {{lists,merge2_1,4},                           65,    0.165,    0.165},      
+  {{lists,rkeymergel,4},                         31,    0.136,    0.136},      
+  {{lists,merge2_2,5},                           43,    0.117,    0.117},      
+  {{lists,keymerge2_2,7},                        22,    0.093,    0.093},      
+  {{lists,reverse,1},                            31,    0.058,    0.058},      
+  {{lists,keymergel,4},                          13,    0.042,    0.042},      
+  {{lists,rmerge2_1,4},                          29,    0.038,    0.038},      
+  {{lists,rkeymerge2_1,6},                        3,    0.013,    0.013},      
+  {{lists,mergel,2},                              1,    0.007,    0.007},      
+  {{lists,rmergel,2},                             1,    0.001,    0.001}],     
+ { {lists,reverse,2},                           673,    1.630,    1.630},     %
+ [ ]}.
+
+{[{{lists,foldl,3},                              43,    1.522,    0.056}],     
+ { {dict,'-from_list/1-fun-0-',2},               43,    1.522,    0.056},     %
+ [{{dict,store,3},                               43,    1.466,    0.217}]}.    
+
+{[{{dict,'-from_list/1-fun-0-',2},               43,    1.466,    0.217}],     
+ { {dict,store,3},                               43,    1.466,    0.217},     %
+ [{{dict,on_bucket,3},                           43,    0.782,    0.312},      
+  {{dict,get_slot,2},                            43,    0.237,    0.154},      
+  {{dict,maybe_expand,2},                        43,    0.230,    0.062}]}.    
+
+{[{{lists,rkeymergel,4},                         16,    0.586,    0.054},      
+  {{lists,rkeymerge2_2,7},                       27,    0.414,    0.099},      
+  {{lists,rkeymerge3_2,10},                       2,    0.051,    0.021},      
+  {{lists,rkeymerge2_1,6},                       24,    0.000,    0.057}],     
+ { {lists,rkeymerge2_1,6},                       69,    1.051,    0.231},     %
+ [{{lists,rkeymerge2_2,7},                       42,    0.532,    0.158},      
+  {{lists,reverse,2},                             3,    0.013,    0.013},      
+  {{lists,rkeymerge2_1,6},                       24,    0.000,    0.057}]}.    
+
+{[{{huffman,encode,1},                            1,    0.830,    0.014}],     
+ { {huffman,codewords,1},                         1,    0.830,    0.014},     %
+ [{{huffman,codewords,2},                         2,    0.811,    0.278},      
+  {{erlang,'++',2},                               1,    0.005,    0.005}]}.    
+
+{[{{huffman,codewords,1},                         2,    0.811,    0.278},      
+  {{huffman,codewords,2},                        82,    0.000,    0.407}],     
+ { {huffman,codewords,2},                        84,    0.811,    0.685},     %
+ [{{erlang,'++',2},                              41,    0.118,    0.118},      
+  {garbage_collect,                               1,    0.008,    0.008},      
+  {{huffman,codewords,2},                        82,    0.000,    0.407}]}.    
+
+{[{{dict,store,3},                               43,    0.782,    0.312}],     
+ { {dict,on_bucket,3},                           43,    0.782,    0.312},     %
+ [{{dict,'-store/3-fun-0-',3},                   43,    0.255,    0.074},      
+  {{erlang,setelement,3},                       129,    0.197,    0.197},      
+  {garbage_collect,                               1,    0.018,    0.018}]}.    
+
+{[{{lists,keysort,2},                             1,    0.631,    0.001},      
+  {{lists,keysplit_1_1,10},                       9,    0.000,    0.046},      
+  {{lists,keysplit_1,8},                         23,    0.000,    0.081}],     
+ { {lists,keysplit_1,8},                         33,    0.631,    0.128},     %
+ [{{lists,keysplit_1_1,10},                       9,    0.626,    0.044},      
+  {{lists,rkeymergel,4},                          1,    0.459,    0.006},      
+  {{lists,keysplit_1,8},                         23,    0.000,    0.081}]}.    
+
+{[{{lists,keysplit_1,8},                          9,    0.626,    0.044}],     
+ { {lists,keysplit_1_1,10},                       9,    0.626,    0.044},     %
+ [{{lists,keysplit_1,8},                          9,    0.000,    0.046}]}.    
+
+{[{{huffman,decode,4},                            9,    0.106,    0.000},      
+  {{lists,merge3_2,6},                            4,    0.068,    0.000},      
+  {{dict,fetch,2},                               10,    0.053,    0.000},      
+  {{lists,split_1_1,6},                           2,    0.035,    0.000},      
+  {{lists,splitwith,3},                           5,    0.024,    0.000},      
+  {{lists,rmerge3_12_3,6},                        2,    0.019,    0.000},      
+  {{lists,rmergel,2},                             1,    0.018,    0.000},      
+  {{lists,rmerge3_1,6},                           1,    0.018,    0.000},      
+  {{lists,rmerge2_1,4},                           2,    0.014,    0.000},      
+  {{lists,merge3_21_3,6},                         1,    0.013,    0.000},      
+  {{lists,keysplit_2_1,10},                       1,    0.012,    0.000},      
+  {{lists,split_1,5},                             1,    0.010,    0.000},      
+  {{lists,merge3_12_3,6},                         2,    0.010,    0.000},      
+  {{lists,rmerge2_2,5},                           1,    0.009,    0.000},      
+  {{lists,keymerge2_1,6},                         1,    0.008,    0.000},      
+  {{huffman,'-encode/1-lbc$^0/2-0-',3},           5,    0.008,    0.000},      
+  {{huffman,profile,1},                           1,    0.004,    0.000},      
+  {{lists,merge2_1,4},                            1,    0.003,    0.000},      
+  {{lists,rmerge3_2,6},                           1,    0.001,    0.000},      
+  {{dict,get_bucket,2},                           1,    0.001,    0.000},      
+  {{dict,fetch_val,2},                            1,    0.001,    0.000},      
+  {{fprof,just_call,2},                           1,    0.000,    0.000}],     
+ { suspend,                                      54,    0.435,    0.000},     %
+ [ ]}.
+
+{[{{lists,keymerge2_1,6},                        14,    0.271,    0.054},      
+  {{lists,keymerge3_2,10},                        9,    0.158,    0.041},      
+  {{lists,keymerge2_2,7},                        39,    0.000,    0.234}],     
+ { {lists,keymerge2_2,7},                        62,    0.429,    0.329},     %
+ [{{lists,reverse,2},                            22,    0.093,    0.093},      
+  {{lists,keymerge2_1,6},                         1,    0.007,    0.006},      
+  {{lists,keymerge2_2,7},                        39,    0.000,    0.234}]}.    
+
+{[{{lists,keymerge3_1,10},                       14,    0.395,    0.066},      
+  {{lists,keymerge3_21_3,9},                      3,    0.000,    0.003},      
+  {{lists,keymerge3_2,10},                       24,    0.000,    0.080}],     
+ { {lists,keymerge3_2,10},                       41,    0.395,    0.149},     %
+ [{{lists,keymerge2_2,7},                         9,    0.158,    0.041},      
+  {{lists,keymerge3_12_3,9},                      2,    0.042,    0.007},      
+  {{lists,keymerge2_1,6},                         1,    0.018,    0.012},      
+  {{lists,keymerge3_21_3,9},                      2,    0.000,    0.002},      
+  {{lists,keymerge3_2,10},                       24,    0.000,    0.080},      
+  {{lists,keymerge3_1,10},                        3,    0.000,    0.009}]}.    
+
+{[{{dict,on_bucket,3},                          129,    0.197,    0.197},      
+  {{dict,maybe_expand_aux,2},                    43,    0.059,    0.059}],     
+ { {erlang,setelement,3},                       172,    0.256,    0.256},     %
+ [ ]}.
+
+{[{{dict,on_bucket,3},                           43,    0.255,    0.074}],     
+ { {dict,'-store/3-fun-0-',3},                   43,    0.255,    0.074},     %
+ [{{dict,store_bkt_val,3},                       43,    0.181,    0.096}]}.    
+
+{[{{dict,store,3},                               43,    0.230,    0.062}],     
+ { {dict,maybe_expand,2},                        43,    0.230,    0.062},     %
+ [{{dict,maybe_expand_aux,2},                    43,    0.168,    0.109}]}.    
+
+{[{{lists,splitwith,3},                          43,    0.141,    0.094},      
+  {{huffman,decode,4},                            1,    0.059,    0.010}],     
+ { {lists,reverse,1},                            44,    0.200,    0.104},     %
+ [{{lists,reverse,2},                            31,    0.058,    0.058},      
+  {garbage_collect,                               2,    0.038,    0.038}]}.    
+
+{[{{lists,rkeymerge3_1,10},                       5,    0.129,    0.037},      
+  {{lists,rkeymerge3_12_3,9},                     4,    0.055,    0.015},      
+  {{lists,rkeymerge3_2,10},                       2,    0.000,    0.012}],     
+ { {lists,rkeymerge3_2,10},                      11,    0.184,    0.064},     %
+ [{{lists,rkeymerge2_1,6},                        2,    0.051,    0.021},      
+  {{lists,rkeymerge3_12_3,9},                     4,    0.037,    0.015},      
+  {{lists,rkeymerge3_2,10},                       2,    0.000,    0.012},      
+  {{lists,rkeymerge3_1,10},                       3,    0.000,    0.024}]}.    
+
+{[{{dict,'-store/3-fun-0-',3},                   43,    0.181,    0.096},      
+  {{dict,store_bkt_val,3},                       43,    0.000,    0.085}],     
+ { {dict,store_bkt_val,3},                       86,    0.181,    0.181},     %
+ [{{dict,store_bkt_val,3},                       43,    0.000,    0.085}]}.    
+
+{[{{dict,maybe_expand,2},                        43,    0.168,    0.109}],     
+ { {dict,maybe_expand_aux,2},                    43,    0.168,    0.109},     %
+ [{{erlang,setelement,3},                        43,    0.059,    0.059}]}.    
+
+{[{{huffman,codewords,2},                        41,    0.118,    0.118},      
+  {{huffman,codewords,1},                         1,    0.005,    0.005}],     
+ { {erlang,'++',2},                              42,    0.123,    0.123},     %
+ [ ]}.
+
+{[{{lists,rkeymerge3_1,10},                       1,    0.068,    0.006}],     
+ { {lists,rkeymerge3_21_3,9},                     1,    0.068,    0.006},     %
+ [{{lists,rkeymerge3_1,10},                       1,    0.000,    0.006}]}.    
+
+{[{{lists,keymerge3_2,10},                        2,    0.042,    0.007},      
+  {{lists,keymerge3_12_3,9},                      2,    0.000,    0.002},      
+  {{lists,keymerge3_1,10},                        2,    0.000,    0.007}],     
+ { {lists,keymerge3_12_3,9},                      6,    0.042,    0.016},     %
+ [{{lists,keymerge3_12_3,9},                      2,    0.000,    0.002},      
+  {{lists,keymerge3_1,10},                        4,    0.000,    0.009}]}.    
+
+{[{{huffman,profile,1},                           1,    0.034,    0.002}],     
+ { {fprof,trace,1},                               1,    0.034,    0.002},     %
+ [{{fprof,call,1},                                1,    0.032,    0.008}]}.    
+
+{[{{fprof,trace,1},                               1,    0.032,    0.008}],     
+ { {fprof,call,1},                                1,    0.032,    0.008},     %
+ [{{fprof,just_call,2},                           1,    0.015,    0.011},      
+  {{erlang,whereis,1},                            1,    0.009,    0.009}]}.    
+
+{[{{lists,keymerge3_1,10},                        1,    0.021,    0.001},      
+  {{lists,keymerge3_21_3,9},                      2,    0.000,    0.002},      
+  {{lists,keymerge3_2,10},                        2,    0.000,    0.002}],     
+ { {lists,keymerge3_21_3,9},                      5,    0.021,    0.005},     %
+ [{{lists,keymerge3_21_3,9},                      2,    0.000,    0.002},      
+  {{lists,keymerge3_2,10},                        3,    0.000,    0.003}]}.    
+
+{[{{dict,from_list,1},                            1,    0.018,    0.012}],     
+ { {dict,new,0},                                  1,    0.018,    0.012},     %
+ [{{dict,mk_seg,1},                               1,    0.006,    0.006}]}.    
+
+{[{{fprof,call,1},                                1,    0.009,    0.009}],     
+ { {erlang,whereis,1},                            1,    0.009,    0.009},     %
+ [ ]}.
+
+{[{{fprof,just_call,2},                           1,    0.008,    0.008}],     
+ { {erlang,demonitor,1},                          1,    0.008,    0.008},     %
+ [ ]}.
+
+{[{{dict,new,0},                                  1,    0.006,    0.006}],     
+ { {dict,mk_seg,1},                               1,    0.006,    0.006},     %
+ [ ]}.
+
+{[{{fprof,just_call,2},                           1,    0.004,    0.004}],     
+ { {erlang,monitor,2},                            1,    0.004,    0.004},     %
+ [ ]}.
+
+{[ ],
+ { undefined,                                     0,    0.000,    0.000},     %
+ [{{huffman,profile,1},                           0,  302.074,    0.003},      
+  {{fprof,just_call,2},                           0,    0.029,    0.021}]}.    
+
+
